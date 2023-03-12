@@ -24,6 +24,7 @@ pipeline{
         stage('cd'){
             steps{
                 sh 'cd ../..'
+                sh 'pwd'
             }
         }
         stage('ansible'){
