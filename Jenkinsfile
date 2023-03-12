@@ -23,8 +23,7 @@ pipeline{
         }
         stage('cd'){
             steps{
-                sh 'cd ..'
-                sh 'cd /home/sai/'
+                sh 'cd ../..'
             }
         }
         stage('ansible'){
