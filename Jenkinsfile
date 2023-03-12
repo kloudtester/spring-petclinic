@@ -30,7 +30,7 @@ pipeline{
         }
         stage('ansible'){
             steps{
-                sh 'ansible-playbook -i hosts spc.yml'
+                sh 'ansible-playbook -i hosts /home/sai/workspace/petclinic/spc.yml'
             }
         }
     }
