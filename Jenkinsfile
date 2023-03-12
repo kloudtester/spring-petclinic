@@ -1,6 +1,9 @@
 pipeline{
     agent {label 'agent'}
     triggers{ pollSCM('* * * * *') }
+    tools{
+        maven 'maven'
+    }
     stages{
         stage('vcs'){
             steps{
@@ -11,6 +14,11 @@ pipeline{
         stage('maven_build'){
             steps{
                 sh 'mvn package'
+            }
+        }
+        stage('copy'){
+            steps{
+                sh 'cp /home/sai/workspace/petclinic/target/*.jar /home/sai/'
             }
         }
         stage('ansible'){
