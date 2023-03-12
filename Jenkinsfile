@@ -19,6 +19,7 @@ pipeline{
         stage('copy'){
             steps{
                 sh 'cp /home/sai/workspace/petclinic/target/*.jar /home/sai/'
+                sh 'mv /home/sai/spc.yml /home/sai/workspace/petclinic/'
             }
         }
         stage('cd'){
@@ -29,7 +30,7 @@ pipeline{
         }
         stage('ansible'){
             steps{
-                sh 'ansible-playbook -i hosts /home/sai/spc.yml'
+                sh 'ansible-playbook -i hosts spc.yml'
             }
         }
     }
