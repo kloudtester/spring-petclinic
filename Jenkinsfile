@@ -23,7 +23,7 @@ pipeline{
         }
         stage('cd'){
             steps{
-                sh 'cd ../..'
+                sh 'cd ~'
                 sh 'pwd'
             }
         }
