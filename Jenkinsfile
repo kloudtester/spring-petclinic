@@ -20,6 +20,7 @@ pipeline{
             steps{
                 sh 'cp /home/sai/workspace/petclinic/target/*.jar /home/sai/'
                 sh 'cp /home/sai/spc.yml /home/sai/workspace/petclinic/'
+                sh  'cp /home/sai/hosts /home/sai/workspace/petclinic/'
             }
         }
         
