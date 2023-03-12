@@ -1,0 +1,8 @@
+- name: spc
+  become: yes
+  hosts: all
+  tasks:
+    - name: service_file
+      copy:
+        src: /home/sai/spc.service
+        dest: /etc/systemd/system/spc.service
