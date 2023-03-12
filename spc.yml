@@ -6,3 +6,8 @@
       copy:
         src: /home/sai/spc.service
         dest: /etc/systemd/system/spc.service
+    - name: Restart service
+      ansible.builtin.systemd:
+        state: started
+        daemon_reload: true
+        name: spc.service 
