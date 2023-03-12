@@ -19,7 +19,7 @@ pipeline{
         stage('copy'){
             steps{
                 sh 'cp /home/sai/workspace/petclinic/target/*.jar /home/sai/'
-                sh 'mv /home/sai/spc.yml /home/sai/workspace/petclinic/'
+                sh 'cp /home/sai/spc.yml /home/sai/workspace/petclinic/'
             }
         }
         stage('cd'){
