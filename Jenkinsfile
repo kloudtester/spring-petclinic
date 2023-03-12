@@ -22,11 +22,6 @@ pipeline{
                 sh 'cp /home/sai/spc.yml /home/sai/workspace/petclinic/'
             }
         }
-        stage('cd'){
-            steps{
-                sh 'cd ~'
-                sh 'pwd'
-            }
         }
         stage('ansible'){
             steps{
@@ -34,4 +29,3 @@ pipeline{
             }
         }
     }
-}
