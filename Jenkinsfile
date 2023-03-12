@@ -22,10 +22,11 @@ pipeline{
                 sh 'cp /home/sai/spc.yml /home/sai/workspace/petclinic/'
             }
         }
-        }
+        
         stage('ansible'){
             steps{
                 sh 'ansible-playbook -i hosts /home/sai/workspace/petclinic/spc.yml'
             }
         }
     }
+}
